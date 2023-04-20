@@ -44,7 +44,7 @@ jobs:
         cache-dependency-path: MiniProjectCC1-Ghilbi-API/package-lock.json
 
     - name: npm install, build, and test
-      run: |
+      run: 
         npm install
         npm run build --if-present
         npm run test --if-present
