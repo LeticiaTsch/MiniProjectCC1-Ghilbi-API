@@ -24,8 +24,8 @@ on:
 
 env:
   AZURE_WEBAPP_NAME: MiniProjectCC1-Ghibli-API    # set this to your application's name
-  AZURE_WEBAPP_PACKAGE_PATH: '.'      # set this to the path to your web app project, defaults to the repository root
-  NODE_VERSION: '18.x'                # set this to the node version to use
+  AZURE_WEBAPP_PACKAGE_PATH: '.'                  # set this to the path to your web app project, defaults to the repository root
+  NODE_VERSION: 18.x                              # set this to the node version to use
 
 permissions:
   contents: read
@@ -36,7 +36,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: Set up Node.js
+    - name: Setup Node.js
       uses: actions/setup-node@v3
       with:
         node-version: ${{ env.NODE_VERSION }}
